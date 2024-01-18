@@ -217,3 +217,68 @@ Vector2D& Vector2D::subtract(const float& x, const float& y)
 	this->y -= y;
 	return *this;
 }
+
+//*******
+// Test *
+//*******
+
+void Vector2D::test()
+{
+	// constructor (x, y)
+	Vector2D v1(3, 5);
+	Vector2D v2(8, 9);
+	Vector2D v3(8, 9);
+
+	// v.x, v.y
+	std::cout << "v1.x = " << v1.x << ", v1.y = " << v1.y << '\n';
+	std::cout << "v2.x = " << v2.x << ", v2.y = " << v2.y << '\n';
+	std::cout << "v3.x = " << v3.x << ", v3.y = " << v3.y << "\n\n";
+
+	// operator <<
+	std::cout << "v1 = " << v1 << '\n';
+	std::cout << "v2 = " << v2 << '\n';
+	std::cout << "v3 = " << v3 << "\n\n";
+
+	// operator *, /, +, -, ==, !=
+	std::cout << v1 << " * " << v2 << " = " << v1 * v2 << '\n';
+	std::cout << v1 << " / " << v2 << " = " << v1 / v2 << '\n';
+	std::cout << v1 << " + " << v2 << " = " << v1 + v2 << '\n';
+	std::cout << v1 << " - " << v2 << " = " << v1 - v2 << "\n\n";
+
+	if (v1 == v2) { std::cout << "v1 == v2\n"; } else { std::cout << "v1 != v2\n"; }
+	if (v1 == v3) { std::cout << "v1 == v3\n"; } else { std::cout << "v1 != v3\n"; }
+	if (v2 == v3) { std::cout << "v2 == v3\n"; } else { std::cout << "v2 != v3\n\n"; }
+
+	if (v1 != v2) { std::cout << "v1 != v2\n"; } else { std::cout << "v1 == v2\n"; }
+	if (v1 != v3) { std::cout << "v1 != v3\n"; } else { std::cout << "v1 == v3\n"; }
+	if (v2 != v3) { std::cout << "v2 != v3\n"; } else { std::cout << "v2 == v3\n\n"; }
+
+	// operator *=(Vector2D), *=(float), /=, +=, -=
+	std::cout << v1 << " *= " << v2 << " => "; v1 *= v2; std::cout << v1 << "\n\n";
+	std::cout << v1 << " /= " << v3 << " => "; v1 /= v3; std::cout << v1 << "\n\n";
+	std::cout << v1 << " += " << v2 << " => "; v1 += v2; std::cout << v1 << "\n\n";
+	std::cout << v1 << " -= " << v3 << " => "; v1 -= v3; std::cout << v1 << "\n\n";
+
+	// functions
+	std::cout << "v1 = " << v1 << '\n';
+	std::cout << "v2 = " << v2 << '\n';
+	std::cout << "v3 = " << v3 << "\n\n";
+
+	std::cout << "v1.multiply(v2),   v1 = " << v1.multiply(v2) << '\n';
+	std::cout << "v1.multiply(8, 9), v1 = " << v1.multiply(8, 9) << '\n';
+	std::cout << "v1.divide(v2),     v1 = " << v1.divide(v2) << '\n';
+	std::cout << "v1.divide(8, 9),   v1 = " << v1.divide(8, 9) << '\n';
+	std::cout << "v1.add(v2),        v1 = " << v1.add(v2) << '\n';
+	std::cout << "v1.add(8, 9),      v1 = " << v1.add(8, 9) << '\n';
+	std::cout << "v1.subtract(v2),   v1 = " << v1.subtract(v2) << '\n';
+	std::cout << "v1.subtract(8, 9), v1 = " << v1.subtract(8, 9) << '\n';
+	std::cout << "v1.scale(2),       v1 = " << v1.scale(2) << '\n';
+	std::cout << "v1.scale(2, 4)     v1 = " << v1.scale(2, 4) << '\n';
+	std::cout << "v1.scale(0.25)     v1 = " << v1.scale(0.25) << "\n\n";
+
+	std::cout << "v1 = " << v1 << '\n';
+	std::cout << "v2 = " << v2 << "\n\n";
+
+	std::cout << "v1.distance(v2) = " << v1.distance(v2) << '\n';
+	std::cout << "v1.distance(8, 9) = " << v1.distance(v2.x, v2.y) << '\n';
+}

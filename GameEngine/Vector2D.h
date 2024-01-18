@@ -108,4 +108,11 @@ public:
 
 	Vector2D&	subtract(const float& x, const float& y);
 	// Returns this Vector2D as the product of the x and y values of this Vector2D and the specified x and y values.
+
+	//*******
+	// Test *
+	//*******
+
+	static void	test();
+	// Outputs to the terminal a sample test of this class and its functionalities.
 };
