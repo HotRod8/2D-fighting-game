@@ -1,5 +1,5 @@
-#include "Vector2D.h"
 #include <cmath>
+#include "Vector2D.h"
 
 //*********************
 // Operator Overloads *
@@ -68,52 +68,42 @@ Vector2D::Vector2D(const float& x, const float& y) : x(x), y(y)
 // Operator Overloads *
 //*********************
 
-Vector2D& Vector2D::operator*=(const Vector2D& v)
-// Returns this Vector2D with x and y values that are the product of the
-// x and y values of this Vector2D and v.
+void Vector2D::operator*=(const Vector2D& v)
+// Multiplies the x and y values of this Vector2D with the specified Vector2D.
 {
 	x *= v.x;
 	y *= v.y;
-	return *this;
 }
 
-Vector2D& Vector2D::operator*=(const float& scale)
-// Returns this scaled Vector with x and y values scaled by the
-// specified amount.
+void Vector2D::operator*=(const float& scale)
+// Multiplies the x and y values of this Vector2D with the specified scale.
 {
 	x *= scale;
 	y *= scale;
-	return *this;
 }
 
-Vector2D& Vector2D::operator/=(const Vector2D& v)
-// Returns this Vector2D with x and y values that are the quotient of the
-// x and y values of this Vector2D and v.
+void Vector2D::operator/=(const Vector2D& v)
+// Divides the x and y values of this Vector2D with the specified Vector2D.
 {
 	if (v.x == 0 || v.y == 0)
-		return *this;
+		return;
 	
 	x /= v.x;
 	y /= v.y;
-	return *this;
 }
 
-Vector2D& Vector2D::operator+=(const Vector2D& v)
-// Returns this Vector2D with x and y values that are the sum of the
-// x and y values of this Vector2D and v2.
+void Vector2D::operator+=(const Vector2D& v)
+// Adds the x and y values of this Vector2D with the specified Vector2D.
 {
 	x += v.x;
 	y += v.y;
-	return *this;
 }
 
-Vector2D& Vector2D::operator-=(const Vector2D& v)
-// Returns this Vector2D with x and y values that are the difference of 
-// the x and y values of this Vector2D and v.
+void Vector2D::operator-=(const Vector2D& v)
+// Subtracts the x and y values of this Vector2D with the specified Vector2D.
 {
 	x -= v.x;
 	y -= v.y;
-	return *this;
 }
 
 //************
@@ -139,13 +129,13 @@ Vector2D& Vector2D::add(const float& x, const float& y)
 float Vector2D::distance(const Vector2D& v)
 // Returns the distance between this Vector2D and the specified Vector2D.
 {
-	return std::sqrtf((v.x - x) * (v.x - x) + (v.y - y) * (v.y - y));
+	return std::sqrt((v.x - x) * (v.x - x) + (v.y - y) * (v.y - y));
 }
 
 float Vector2D::distance(const float& x, const float& y)
 // Returns the distance between this Vector2D and the specified 2D coordinate.
 {
-	return std::sqrtf((x - this->x) * (x - this->x) + (y - this->y) * (y - this->y));
+	return std::sqrt((x - this->x) * (x - this->x) + (y - this->y) * (y - this->y));
 }
 
 Vector2D& Vector2D::divide(const Vector2D& v)
@@ -168,6 +158,18 @@ Vector2D& Vector2D::divide(const float& x, const float& y)
 	this->x /= x;
 	this->y /= y;
 	return *this;
+}
+
+bool Vector2D::equals(const Vector2D& v)
+// Returns true if the x and y values of this Vector2D are equal to that of the specified Vector2D.
+{
+	return x == v.x && y == v.y;
+}
+
+bool Vector2D::equals(const float& x, const float& y)
+// Returns true if the x and y values of thiv Vector2D are equal to the specified x and y values.
+{
+	return this->x == x && this->y == y;
 }
 
 Vector2D& Vector2D::multiply(const Vector2D& v)

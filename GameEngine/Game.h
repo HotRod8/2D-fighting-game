@@ -1,3 +1,6 @@
+#ifndef _GAME_H
+#define _GAME_H 
+
 #include <SFML/Graphics.hpp>
 #include <string>
 
@@ -9,8 +12,8 @@ public:
 	// Constructors / Destructor *
 	//****************************
 
-	Game(const std::string& title, const unsigned int& resolutionWidth, const unsigned int& resolutionHeight, const unsigned int& frameRate);
-	// Stores the specified parameters in the appropriate member data.
+	Game(const std::string& title, const int& resolutionWidth, const int& resolutionHeight, const int& frameRate);
+	// Stores the specified parameters for the sf::RenderWindow in the appropriate member data.
 
 	~Game();
 	// Deallocation when the window is closed.
@@ -22,15 +25,17 @@ public:
 	void launch();
 	// Creates a window with the stored title, resolution, and framerate specified from the constructor call.
 
-protected:
+private:
 
 	//*******
 	// Data *
 	//*******
 
-	sf::RenderWindow* window;
-	std::string	title;
-	unsigned int resolutionWidth;
-	unsigned int resolutionHeight;
-	unsigned int frameRate;
+	sf::RenderWindow*	window;
+	std::string			title;
+	int					resolutionWidth;
+	int					resolutionHeight;
+	int					frameRate;
 };
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef _VECTOR2D_H
+#define _VECTOR2D_H
+
 #include <iostream>
 
 struct Vector2D
@@ -32,6 +35,7 @@ struct Vector2D
 	// Returns true if the x or y values of v1 and v2 are NOT equal.
 
 public:
+	
 	//*******
 	// Data *
 	//*******
@@ -49,25 +53,20 @@ public:
 	// Operator Overloads *
 	//*********************
 
-	Vector2D& operator*=(const Vector2D& v);
-	// Returns this Vector2D with x and y values that are the product of the
-	// x and y values of this Vector2D and v.
+	void operator*=(const Vector2D& v);
+	// Multiplies the x and y values of this Vector2D with the specified Vector2D.
 
-	Vector2D& operator*=(const float& scale);
-	// Returns this scaled Vector with x and y values scaled by the
-	// specified amount.
+	void operator*=(const float& scale);
+	// Multiplies the x and y values of this Vector2D with the specified scale.
 
-	Vector2D& operator/=(const Vector2D& v);
-	// Returns this Vector2D with x and y values that are the quotient of the
-	// x and y values of this Vector2D and v.
+	void operator/=(const Vector2D& v);
+	// Divides the x and y values of this Vector2D with the specified Vector2D.
 
-	Vector2D& operator+=(const Vector2D& v);
-	// Returns this Vector2D with x and y values that are the sum of the
-	// x and y values of this Vector2D and v.
+	void operator+=(const Vector2D& v);
+	// Adds the x and y values of this Vector2D with the specified Vector2D.
 
-	Vector2D& operator-=(const Vector2D& v);
-	// Returns this Vector2D with x and y values that are the difference of 
-	// the x and y values of this Vector2D and v.
+	void operator-=(const Vector2D& v);
+	// Subtracts the x and y values of this Vector2D with the specified Vector2D.
 
 	//************
 	// Functions *
@@ -90,6 +89,12 @@ public:
 
 	Vector2D&	divide(const float& x, const float& y);
 	// Returns this Vector2D as the quotient of the x and y values of this Vector2D and the specified x and y values.
+
+	bool		equals(const Vector2D& v);
+	// Returns true if the x and y values of this Vector2D are equal to that of the specified Vector2D.
+
+	bool		equals(const float& x, const float& y);
+	// Returns true if the x and y values of thiv Vector2D are equal to the specified x and y values.
 
 	Vector2D&	multiply(const Vector2D& v);
 	// Returns this Vector2D as the product of the x and y values of this Vector2D and the specified Vector2D.
@@ -116,3 +121,5 @@ public:
 	static void	test();
 	// Outputs to the terminal a sample test of this class and its functionalities.
 };
+
+#endif

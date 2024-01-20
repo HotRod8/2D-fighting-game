@@ -4,9 +4,13 @@
 // Constructors / Destructor *
 //****************************
 
-Game::Game(const std::string& title, const unsigned int& resolutionWidth, const unsigned int& resolutionHeight, const unsigned int& frameRate)
+Game::Game(const std::string& title, const int& resolutionWidth, const int& resolutionHeight, const int& frameRate)
 // Stores the specified parameters in the appropriate member data.
-	: window(nullptr), title(title), resolutionWidth(resolutionWidth), resolutionHeight(resolutionHeight), frameRate(frameRate)
+	: window(nullptr)
+	, title(title)
+	, resolutionWidth(resolutionWidth)
+	, resolutionHeight(resolutionHeight)
+	, frameRate(frameRate)
 {
 
 }
@@ -15,6 +19,10 @@ Game::~Game()
 {
 	delete window;
 }
+
+//************
+// Functions *
+//************
 
 void Game::launch()
 // Creates a window with the stored title, resolution, and framerate specified from the constructor call.
@@ -33,6 +41,8 @@ void Game::launch()
 		{
 			window->close();
 		}
+
+		// >>> Game Loop probably goes somewhere in this while loop <<<
 
 		window->clear();
 		window->display();
