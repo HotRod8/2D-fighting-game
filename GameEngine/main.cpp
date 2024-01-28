@@ -1,7 +1,6 @@
 #include "Game.h"
+#include "AssetManager.h"
 #include <string>
-
-using std::string;
 
 int main()
 {   

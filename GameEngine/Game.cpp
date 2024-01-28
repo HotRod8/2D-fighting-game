@@ -1,4 +1,5 @@
 #include "Game.h"
+#include "AssetManager.h"
 
 //****************************
 // Constructors / Destructor *
@@ -27,24 +28,42 @@ Game::~Game()
 void Game::launch()
 // Creates a window with the stored title, resolution, and framerate specified from the constructor call.
 {
-	window = new sf::RenderWindow(sf::VideoMode(resolutionWidth, resolutionHeight), title);
+    window = new sf::RenderWindow(sf::VideoMode(resolutionWidth, resolutionHeight), title);
 
-	window->setFramerateLimit(frameRate);
-	
-	while (window->isOpen())
-	{
-		sf::Event event;
+    window->setFramerateLimit(frameRate);
 
-		window->pollEvent(event);
+    AssetManager assetManager;
 
-		if (event.type == sf::Event::Closed)
-		{
-			window->close();
-		}
+    assetManager.addTexture("mario", "mario.png");
+    assetManager.addSound("coin", "coin.wav");
+    assetManager.addMusic("overworld", "overworld.wav");
 
-		// >>> Game Loop probably goes somewhere in this while loop <<<
+    sf::Sprite marioSprite(assetManager.getTexture("mario"));
+    sf::Sound coinSound = assetManager.getSound("coin");
 
-		window->clear();
-		window->display();
-	}
+    marioSprite.scale(sf::Vector2f(32, 32));
+
+    assetManager.getMusic("overworld").play();
+
+    while (window->isOpen())
+    {
+        sf::Event event;
+
+        while (window->pollEvent(event))
+        {
+            if (event.type == sf::Event::Closed)
+            {
+                window->close();
+            }
+
+            if (event.type == sf::Event::KeyPressed)
+            {
+                coinSound.play();
+            }
+        }
+
+        window->clear();
+        window->draw(marioSprite);
+        window->display();
+    }
 }
