@@ -34,16 +34,22 @@ void Game::launch()
 
     AssetManager assetManager;
 
-    assetManager.addTexture("mario", "mario.png");
-    assetManager.addSound("coin", "coin.wav");
-    assetManager.addMusic("overworld", "overworld.wav");
+    //assetManager.addTexture("mario", "mario.png");
+    //assetManager.addSound("coin", "coin.wav");
+    //assetManager.addMusic("overworld", "overworld.wav");
 
-    sf::Sprite marioSprite(assetManager.getTexture("mario"));
-    sf::Sound coinSound = assetManager.getSound("coin");
+    //sf::Sprite marioSprite(assetManager.getTexture("mario"));
+    //sf::Sound coinSound = assetManager.getSound("coin");
+
+    //marioSprite.scale(sf::Vector2f(32, 32));
+
+    //assetManager.getMusic("overworld").play();
+
+    assetManager.addTexture("samus", "dread_samus.png"); //This is in a new folder, so the error should be pulled up here.
+
+    sf::Sprite marioSprite(assetManager.getTexture("samus"));
 
     marioSprite.scale(sf::Vector2f(32, 32));
-
-    assetManager.getMusic("overworld").play();
 
     while (window->isOpen())
     {
@@ -56,10 +62,10 @@ void Game::launch()
                 window->close();
             }
 
-            if (event.type == sf::Event::KeyPressed)
-            {
-                coinSound.play();
-            }
+            //if (event.type == sf::Event::KeyPressed)
+            //{
+            //    coinSound.play();
+            //}   
         }
 
         window->clear();

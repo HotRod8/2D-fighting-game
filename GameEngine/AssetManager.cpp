@@ -1,7 +1,9 @@
 #include"AssetManager.h"
 
 AssetManager::AssetManager() : texturePath("./Assets/Images/"), soundEffectsPath("./Assets/Audio/Sound_Effects/"), musicPath("./Assets/Audio/Music/")
-{}
+{
+    defTexture.loadFromFile(texturePath + "error_texture.png");
+}
 
 
 void AssetManager::addMusic(string key, string filename)
@@ -49,7 +51,7 @@ void AssetManager::addTexture(string key, string filename)
 {
     if (!textureMap[key].loadFromFile(texturePath + filename))
     {
-        cout << "Unable to open file." << endl;
+        textureMap[key] = defTexture;
     }
 }
 void AssetManager::removeTexture(string key) {

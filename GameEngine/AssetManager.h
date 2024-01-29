@@ -19,6 +19,8 @@ using sf::Music;
 
 class AssetManager {
 public:
+    Texture defTexture; //default texture used for error checking
+
     AssetManager();
     //Background music
     void addMusic(string key, string filename);
