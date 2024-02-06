@@ -1,2 +1,0 @@
-C:\Users\Jose\source\repos\GameEngine\x64\Release\GameEngine.exe
-C:\Users\Jose\source\repos\2D-fighting-game\GameEngine\x64\Release\GameEngine.exe
