@@ -6,7 +6,13 @@ public class PlayerOneController : MonoBehaviour
 {
     // Fields
 
-    private float speed = 10.0f;
+    public float speed = 10.0f;
+
+    public KeyCode leftKey     = KeyCode.A;
+    public KeyCode rightKey    = KeyCode.D;
+    public KeyCode upKey       = KeyCode.W;
+    public KeyCode downKey     = KeyCode.S;
+    
     private Animator animator;
     private Rigidbody2D body;
 
@@ -26,8 +32,9 @@ public class PlayerOneController : MonoBehaviour
 
         bool isOnGround = animator.GetBool("isOnGround");
         bool isCrouching = animator.GetBool("isCrouching");
-        float xInput = Input.GetAxisRaw("Horizontal");
-        float yInput = Input.GetAxisRaw("Vertical");
+        
+        float xInput = Input.GetAxisRaw("P1_Horizontal");
+        float yInput = Input.GetAxisRaw("P1_Vertical");
 
         Vector2 movement = new Vector2(xInput, yInput);
         body.velocity = movement * speed;
