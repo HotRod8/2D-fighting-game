@@ -26,7 +26,7 @@ public class PlayerTwoController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //bool isOnGround = animator.GetBool("isOnGround");
+        bool isOnGround = animator.GetBool("isOnGround");
         //bool isCrouching = animator.GetBool("isCrouching");
         float xInput = Input.GetAxisRaw("P2_Horizontal");
         float yInput = Input.GetAxisRaw("P2_Vertical");
@@ -34,8 +34,58 @@ public class PlayerTwoController : MonoBehaviour
         Vector2 movement = new Vector2(xInput, yInput);
         body.velocity = movement * speed;
 
-        animator.SetBool("isCrouching", yInput < 0.0f);
-       
+        if (yInput < 0.0f) // moving down
+        {
+            if (isOnGround)
+            {
+                animator.SetBool("isCrouching", true);
+
+                animator.SetBool("isMovingDown", false);
+                animator.SetBool("isMovingUp", false);
+            }
+            else
+            {
+                animator.SetBool("isMovingDown", true);
+
+                animator.SetBool("isCrouching", false);
+                animator.SetBool("isMovingUp", false);
+            }
+        }
+        else if (yInput > 0.0f) // moving up
+        {
+            animator.SetBool("isMovingUp", true);
+
+            animator.SetBool("isCrouching", false);
+            animator.SetBool("isMovingDown", false);
+        }
+        else // idle
+        {
+            animator.SetBool("isCrouching", false);
+            animator.SetBool("isMovingDown", false);
+            animator.SetBool("isMovingUp", false);
+
+        }
+
+
+        if (xInput < 0.0f) // moving forward
+        {
+            animator.SetBool("isMovingForward", true);
+            animator.SetBool("isMovingBackward", false);
+
+        }
+        else if (xInput > 0.0f) // moving backward
+        {
+            animator.SetBool("isMovingBackward", true);
+            animator.SetBool("isMovingForward", false);
+
+        }
+        else // idle
+        {
+            animator.SetBool("isMovingBackward", false);
+            animator.SetBool("isMovingForward", false);
+
+        }
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
