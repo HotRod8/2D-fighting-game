@@ -4,95 +4,107 @@ using UnityEngine;
 
 public class PlayerOneController : MonoBehaviour
 {
-    // Fields
+    private GameObject player1;
+    private GameObject player2;
 
-    public float speed = 10.0f;
+    //**********************
+    // Fields for Player 1 *
+    //**********************
 
-    public KeyCode leftKey     = KeyCode.A;
-    public KeyCode rightKey    = KeyCode.D;
-    public KeyCode upKey       = KeyCode.W;
-    public KeyCode downKey     = KeyCode.S;
-    
+    public float moveSpeed = 10.0f;
+
+    public KeyCode moveLeftKey = KeyCode.A;
+    public KeyCode moveRightKey = KeyCode.D;
+    public KeyCode moveUpKey = KeyCode.W;
+    public KeyCode moveDownKey = KeyCode.S;
+    public KeyCode punchKey = KeyCode.G;
+    public KeyCode kickKey = KeyCode.H;
+    public KeyCode blockKey = KeyCode.B;
+
     private Animator animator;
     private Rigidbody2D body;
+    private SpriteRenderer sprite;
 
     // Start is called before the first frame update
     void Start()
     {
+        player1 = GameObject.Find("Player 1");
+        player2 = GameObject.Find("Player 2");
+
+        // Components for Player 1
         animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //********
-        // INPUT *
-        //********
+        //*************************
+        // KEY / CONTROLLER INPUT *
+        //*************************
 
-        bool isOnGround = animator.GetBool("isOnGround");
-        bool isCrouching = animator.GetBool("isCrouching");
-        
+        // Gets x-axis and y-axis input from both keyboard and controller.
         float xInput = Input.GetAxisRaw("P1_Horizontal");
         float yInput = Input.GetAxisRaw("P1_Vertical");
 
+        bool moveRightKeyPressed = xInput > 0.0f;
+        bool moveLeftKeyPressed = xInput < 0.0f;
+        bool moveUpKeyPressed = yInput > 0.0f;
+        bool moveDownKeyPressed = yInput < 0.0f;
+
+        // Sets the first parameter to TRUE if the second parameter is TRUE, otherwise FALSE.
+        animator.SetBool("isPunching", Input.GetKey(punchKey));
+        animator.SetBool("isKicking", Input.GetKey(kickKey));
+        animator.SetBool("isBlocking", Input.GetKey(blockKey));
+
+        //***********
+        // VELOCITY *
+        //***********
+
+        // Calculate the new velocity based on input.
         Vector2 movement = new Vector2(xInput, yInput);
-        body.velocity = movement * speed;
+        body.velocity = movement * moveSpeed;
 
-        if (yInput < 0.0f) // moving down
-        {
-            if (isOnGround)
-            {
-                animator.SetBool("isCrouching", true);
+        //************
+        // COLLISION *
+        //************
 
-                animator.SetBool("isMovingDown", false);
-                animator.SetBool("isMovingUp", false);
-            }
-            else
-            {
-                animator.SetBool("isMovingDown", true);
+        bool isOnGround = animator.GetBool("isOnGround");
 
-                animator.SetBool("isCrouching", false);
-                animator.SetBool("isMovingUp", false);
-            }
-        }
-        else if (yInput > 0.0f) // moving up
-        {
-            animator.SetBool("isMovingUp", true);
+        //*************************
+        // FACING DIRECTION LOGIC *
+        //*************************
 
-            animator.SetBool("isCrouching", false);
-            animator.SetBool("isMovingDown", false);
-        }
-        else // idle
-        {
-            animator.SetBool("isCrouching", false);
-            animator.SetBool("isMovingDown", false);
-            animator.SetBool("isMovingUp", false);
-        }
-        
-        
-        if (xInput > 0.0f) // moving forward
-        {
-            animator.SetBool("isMovingForward", true);
-            animator.SetBool("isMovingBackward", false);
+        // Flips Player 1 horizontally based on both players' x-coordinates.
+        // Note: transform is a component that contains an entity's position, rotation, and scale.
+        sprite.flipX = player1.transform.position.x > player2.transform.position.x ? true : false;
 
-        }
-        else if (xInput < 0.0f) // moving backward
-        {
-            animator.SetBool("isMovingBackward", true);
-            animator.SetBool("isMovingForward", false);
+        // flipX = false = facing right
+        // flipX = true  = facing left
+        animator.SetBool("isFacingRight", !sprite.flipX);
 
-        }
-        else // idle
-        {
-            animator.SetBool("isMovingBackward", false);
-            animator.SetBool("isMovingForward", false);
-        }
+        //********************************
+        // MOVE FORWARD / BACKWARD LOGIC *
+        //********************************
 
-        // sets isPunching to true or false if key pressed or not pressed
-        animator.SetBool("isPunching", Input.GetKey(KeyCode.G));
-        animator.SetBool("isKicking", Input.GetKey(KeyCode.H));
+        bool isFacingRight = animator.GetBool("isFacingRight");
+
+        animator.SetBool("isMovingForward", (moveRightKeyPressed && isFacingRight) || (moveLeftKeyPressed && !isFacingRight));
+        animator.SetBool("isMovingBackward", (moveRightKeyPressed && !isFacingRight) || (moveLeftKeyPressed && isFacingRight));
+
+        //***********************
+        // MOVE UP / DOWN LOGIC *
+        //***********************
+
+        animator.SetBool("isMovingUp", moveUpKeyPressed);
+        animator.SetBool("isMovingDown", moveDownKeyPressed);
     }
+
+    //*********************************
+    // COLLISION ENTER / EXIT METHODS *
+    //*********************************
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

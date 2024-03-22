@@ -846,10 +846,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aae564a6cd052146a07fcead7d812a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftKey: 276
-  rightKey: 275
-  upKey: 273
-  downKey: 274
+  moveSpeed: 10
+  moveLeftKey: 276
+  moveRightKey: 275
+  moveUpKey: 273
+  moveDownKey: 274
+  overheadKey: 112
+  punchKey: 111
+  kickKey: 105
+  blockKey: 112
 --- !u!95 &1102545554
 Animator:
   serializedVersion: 5
@@ -1064,11 +1069,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 955a090a702bb744fa2852386de56390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  leftKey: 97
-  rightKey: 100
-  upKey: 119
-  downKey: 115
+  moveSpeed: 10
+  moveLeftKey: 97
+  moveRightKey: 100
+  moveUpKey: 119
+  moveDownKey: 115
+  punchKey: 103
+  kickKey: 104
+  blockKey: 98
 --- !u!1 &1878383307
 GameObject:
   m_ObjectHideFlags: 0
