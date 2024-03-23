@@ -1,0 +1,987 @@
+Using pre-set license
+Built from '2022.3/staging' branch; Version is '2022.3.19f1 (244b723c30a6) revision 2378610'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Core' Language: 'en' Physical Memory: 32704 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2022.3.19f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Unity Projects/2D-fighting-game-fix_fight_animations/2D-fighting-game
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+58846
+Successfully changed project path to: C:/Unity Projects/2D-fighting-game-fix_fight_animations/2D-fighting-game
+C:/Unity Projects/2D-fighting-game-fix_fight_animations/2D-fighting-game
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [9168] Host "[IP] 192.168.0.9 [Port] 0 [Flags] 2 [Guid] 77264942 [EditorId] 77264942 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-UDD4H3T) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [9168] Host "[IP] 192.168.0.9 [Port] 0 [Flags] 2 [Guid] 77264942 [EditorId] 77264942 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-UDD4H3T) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with 7 workers.
+Refreshing native plugins compatible for Editor in 17.11 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.19f1 (244b723c30a6)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Unity Projects/2D-fighting-game-fix_fight_animations/2D-fighting-game/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2080 (ID=0x1e87)
+    Vendor:   NVIDIA
+    VRAM:     7987 MB
+    Driver:   31.0.15.5152
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56896
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.013576 seconds.
+- Loaded All Assemblies, in  0.410 seconds
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.308 seconds
+Domain Reload Profiling: 716ms
+	BeginReloadAssembly (121ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (39ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (77ms)
+	LoadAllAssembliesAndSetupDomain (158ms)
+		LoadAssemblies (119ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (155ms)
+			TypeCache.Refresh (153ms)
+				TypeCache.ScanAssembly (137ms)
+			ScanForSourceGeneratedMonoScriptInfo (1ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (308ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (241ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (13ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (171ms)
+			ProcessInitializeOnLoadMethodAttributes (48ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.731 seconds
+Refreshing native plugins compatible for Editor in 6.68 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.678 seconds
+Domain Reload Profiling: 1405ms
+	BeginReloadAssembly (165ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (23ms)
+	RebuildCommonClasses (39ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (47ms)
+	LoadAllAssembliesAndSetupDomain (463ms)
+		LoadAssemblies (361ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (199ms)
+			TypeCache.Refresh (167ms)
+				TypeCache.ScanAssembly (151ms)
+			ScanForSourceGeneratedMonoScriptInfo (26ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (679ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (500ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (10ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (77ms)
+			ProcessInitializeOnLoadAttributes (362ms)
+			ProcessInitializeOnLoadMethodAttributes (39ms)
+			AfterProcessingInitializeOnLoad (9ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (8ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 8.19 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4035 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 70 unused Assets / (244.4 KB). Loaded Objects now: 4490.
+Memory consumption went from 145.0 MB to 144.7 MB.
+Total: 3.584800 ms (FindLiveObjects: 0.257100 ms CreateObjectMapping: 0.263200 ms MarkObjects: 2.851600 ms  DeleteObjects: 0.211800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 36944.145995 seconds.
+  path: Assets/Characters/Vegeta/air_move_forward.png
+  artifactKey: Guid(9cda7c63c0db68d43b1560e00b6ae836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Vegeta/air_move_forward.png using Guid(9cda7c63c0db68d43b1560e00b6ae836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd11eb34953c104ba790b32be948dace7') in 0.098127 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Characters/Vegeta/block_3.png
+  artifactKey: Guid(be3316f88d6d5c8498a7e642888df69c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Vegeta/block_3.png using Guid(be3316f88d6d5c8498a7e642888df69c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '876b1546b68a88d320973c2e96ca43fe') in 0.023260 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Characters/Vegeta/block_1.png
+  artifactKey: Guid(e6c19173e73a4244e98f157cca440d9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Vegeta/block_1.png using Guid(e6c19173e73a4244e98f157cca440d9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7abdd455f21a0d211e5db4f10733fe4') in 0.023928 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.471 seconds
+Refreshing native plugins compatible for Editor in 4.81 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.032 seconds
+Domain Reload Profiling: 1499ms
+	BeginReloadAssembly (161ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (12ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (34ms)
+	RebuildCommonClasses (34ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (32ms)
+	LoadAllAssembliesAndSetupDomain (227ms)
+		LoadAssemblies (301ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (11ms)
+			TypeCache.Refresh (5ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (1033ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (464ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (8ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (82ms)
+			ProcessInitializeOnLoadAttributes (325ms)
+			ProcessInitializeOnLoadMethodAttributes (37ms)
+			AfterProcessingInitializeOnLoad (9ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (15ms)
+Refreshing native plugins compatible for Editor in 6.68 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4029 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 42 unused Assets / (216.6 KB). Loaded Objects now: 4503.
+Memory consumption went from 149.7 MB to 149.5 MB.
+Total: 4.556400 ms (FindLiveObjects: 0.329300 ms CreateObjectMapping: 0.320400 ms MarkObjects: 3.643300 ms  DeleteObjects: 0.262200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.472 seconds
+Refreshing native plugins compatible for Editor in 4.73 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.000 seconds
+Domain Reload Profiling: 1468ms
+	BeginReloadAssembly (163ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (11ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (31ms)
+	RebuildCommonClasses (40ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (30ms)
+	LoadAllAssembliesAndSetupDomain (222ms)
+		LoadAssemblies (300ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (10ms)
+			TypeCache.Refresh (5ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (1000ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (446ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (8ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (77ms)
+			ProcessInitializeOnLoadAttributes (313ms)
+			ProcessInitializeOnLoadMethodAttributes (34ms)
+			AfterProcessingInitializeOnLoad (10ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (16ms)
+Refreshing native plugins compatible for Editor in 5.83 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4030 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 42 unused Assets / (216.4 KB). Loaded Objects now: 4507.
+Memory consumption went from 151.9 MB to 151.7 MB.
+Total: 3.615800 ms (FindLiveObjects: 0.257100 ms CreateObjectMapping: 0.264100 ms MarkObjects: 2.936100 ms  DeleteObjects: 0.157600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.471 seconds
+Refreshing native plugins compatible for Editor in 5.21 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.000 seconds
+Domain Reload Profiling: 1466ms
+	BeginReloadAssembly (159ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (11ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (32ms)
+	RebuildCommonClasses (38ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (30ms)
+	LoadAllAssembliesAndSetupDomain (224ms)
+		LoadAssemblies (299ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (11ms)
+			TypeCache.Refresh (5ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (1000ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (453ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (8ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (79ms)
+			ProcessInitializeOnLoadAttributes (317ms)
+			ProcessInitializeOnLoadMethodAttributes (34ms)
+			AfterProcessingInitializeOnLoad (12ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (15ms)
+Refreshing native plugins compatible for Editor in 6.56 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4030 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 42 unused Assets / (216.5 KB). Loaded Objects now: 4511.
+Memory consumption went from 153.8 MB to 153.6 MB.
+Total: 3.808900 ms (FindLiveObjects: 0.260800 ms CreateObjectMapping: 0.236900 ms MarkObjects: 3.068800 ms  DeleteObjects: 0.241100 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.464 seconds
+Refreshing native plugins compatible for Editor in 4.94 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.996 seconds
+Domain Reload Profiling: 1455ms
+	BeginReloadAssembly (153ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (11ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (31ms)
+	RebuildCommonClasses (40ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (31ms)
+	LoadAllAssembliesAndSetupDomain (219ms)
+		LoadAssemblies (290ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (11ms)
+			TypeCache.Refresh (5ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (996ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (451ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (11ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (74ms)
+			ProcessInitializeOnLoadAttributes (321ms)
+			ProcessInitializeOnLoadMethodAttributes (31ms)
+			AfterProcessingInitializeOnLoad (9ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (15ms)
+Refreshing native plugins compatible for Editor in 5.59 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4030 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 42 unused Assets / (216.6 KB). Loaded Objects now: 4515.
+Memory consumption went from 155.8 MB to 155.6 MB.
+Total: 3.201000 ms (FindLiveObjects: 0.280500 ms CreateObjectMapping: 0.271200 ms MarkObjects: 2.482500 ms  DeleteObjects: 0.165800 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 488.680556 seconds.
+  path: Assets/Characters/Goku/air_idle_1.png
+  artifactKey: Guid(ddfd2e2758305ff449117bc18f951b17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/air_idle_1.png using Guid(ddfd2e2758305ff449117bc18f951b17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36677973dec06d66a0b4c150032f8490') in 0.091233 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Characters/Goku/kick_2.png
+  artifactKey: Guid(c91f12ee155174f4e9cf464ef59a2ae5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/kick_2.png using Guid(c91f12ee155174f4e9cf464ef59a2ae5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20a19c3beff87353bbe5f324bf2f6dfc') in 0.044166 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Characters/Goku/forward_1.png
+  artifactKey: Guid(384b919ecfdaf7c47b6f1e31274907ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/forward_1.png using Guid(384b919ecfdaf7c47b6f1e31274907ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ea20c124156ac5a7d07796f87fb2ec5') in 0.045544 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Characters/Goku/ender_4.png
+  artifactKey: Guid(422c75bd7ce8c414fafd8ceb98c64cda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/ender_4.png using Guid(422c75bd7ce8c414fafd8ceb98c64cda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5eb4d770fa28ce6e3c113362c8a5409c') in 0.047172 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Characters/Goku/backward_2.png
+  artifactKey: Guid(cf99cf250fc18dd48af2260e98166511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/backward_2.png using Guid(cf99cf250fc18dd48af2260e98166511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02d99d2646cfac9ed523ac76c1d85506') in 0.061422 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/Characters/Goku/down_5.png
+  artifactKey: Guid(f73b3b7314c10cd4c828ba05db129a90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/down_5.png using Guid(f73b3b7314c10cd4c828ba05db129a90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1ecf80ba13f156f0c9261ab042f2f89') in 0.023297 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Characters/Goku/punch_4.png
+  artifactKey: Guid(b1f996b150af83f4bbdb59f6c35262f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/punch_4.png using Guid(b1f996b150af83f4bbdb59f6c35262f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d50cb4c4c90181ffff2f356292fd9e3') in 0.024106 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Characters/Goku/punch_1.png
+  artifactKey: Guid(eef5bff2eb008624d9eb00e5ffd09f24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/punch_1.png using Guid(eef5bff2eb008624d9eb00e5ffd09f24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50e9b3f8202f9e7f2662ab76bf867ca1') in 0.022814 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Characters/Goku/kick_4.png
+  artifactKey: Guid(109500c488d53724bb1d8616483786a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/kick_4.png using Guid(109500c488d53724bb1d8616483786a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc5c918ec01257a8f1cf80a1029d4b7c') in 0.022247 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Characters/Goku/punch_2.png
+  artifactKey: Guid(31af14a4271378344a623f1e84dab26b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/punch_2.png using Guid(31af14a4271378344a623f1e84dab26b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd94b5a8fd5f5edc0321c6c668161f412') in 0.022264 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Characters/Goku/goku_block_2.png
+  artifactKey: Guid(92288dc85a0de71448e71e70a12b85fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/goku_block_2.png using Guid(92288dc85a0de71448e71e70a12b85fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5492f9b36bd90ff1377e9377ac9eeaa') in 0.022875 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Characters/Goku/backward_3.png
+  artifactKey: Guid(d41b1f34886a0774a98e8c80dd44cc43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/backward_3.png using Guid(d41b1f34886a0774a98e8c80dd44cc43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f80d707ab50fc7ad1b741c33ba996b4') in 0.021281 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/Characters/Goku/down_4.png
+  artifactKey: Guid(5c662a369e4e64b4baee4d2e3f020217) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/down_4.png using Guid(5c662a369e4e64b4baee4d2e3f020217) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b5c99ecedf5d8a9bdbc6a032b98b327') in 0.021897 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Characters/Goku/ender_3.png
+  artifactKey: Guid(1c04a151cc8b7d64b9972cd3580a0535) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/ender_3.png using Guid(1c04a151cc8b7d64b9972cd3580a0535) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44ff853ffc44b4aae0983833536e47d8') in 0.022386 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Characters/Goku/up_2.png
+  artifactKey: Guid(4dea6d54c060fb74399ef929e6e174eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/up_2.png using Guid(4dea6d54c060fb74399ef929e6e174eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd9eed072410997566377560bd6dd475') in 0.021840 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Characters/Goku/goku_block_3.png
+  artifactKey: Guid(b3db504366f0547409da2bcf10daeb21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/goku_block_3.png using Guid(b3db504366f0547409da2bcf10daeb21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f183d3555aa7d0717d4f99b8d922950d') in 0.022266 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.457 seconds
+Refreshing native plugins compatible for Editor in 4.73 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.996 seconds
+Domain Reload Profiling: 1450ms
+	BeginReloadAssembly (159ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (10ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (32ms)
+	RebuildCommonClasses (32ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (30ms)
+	LoadAllAssembliesAndSetupDomain (221ms)
+		LoadAssemblies (297ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (11ms)
+			TypeCache.Refresh (5ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (997ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (434ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (8ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (72ms)
+			ProcessInitializeOnLoadAttributes (307ms)
+			ProcessInitializeOnLoadMethodAttributes (35ms)
+			AfterProcessingInitializeOnLoad (10ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (14ms)
+Refreshing native plugins compatible for Editor in 5.92 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4029 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 42 unused Assets / (216.8 KB). Loaded Objects now: 4541.
+Memory consumption went from 157.5 MB to 157.3 MB.
+Total: 4.408600 ms (FindLiveObjects: 0.266000 ms CreateObjectMapping: 0.272000 ms MarkObjects: 3.544200 ms  DeleteObjects: 0.325300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 65.123366 seconds.
+  path: Assets/Characters/Goku/air_idle_1.png
+  artifactKey: Guid(ddfd2e2758305ff449117bc18f951b17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/air_idle_1.png using Guid(ddfd2e2758305ff449117bc18f951b17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e208d4504bd13f50f17565d1d7cf3da0') in 0.075877 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 3.708967 seconds.
+  path: Assets/Characters/Goku/backward_1.png
+  artifactKey: Guid(75429cdb6c3e8e3409ac4af63bb6de65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/backward_1.png using Guid(75429cdb6c3e8e3409ac4af63bb6de65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6af10c2f6cea1fd26a9f20f61eafbff2') in 0.038497 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 3.199778 seconds.
+  path: Assets/Characters/Goku/backward_2.png
+  artifactKey: Guid(cf99cf250fc18dd48af2260e98166511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/backward_2.png using Guid(cf99cf250fc18dd48af2260e98166511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b74e2494aa07a35f3c13d8b1b055d10c') in 0.034180 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 3.491443 seconds.
+  path: Assets/Characters/Goku/backward_3.png
+  artifactKey: Guid(d41b1f34886a0774a98e8c80dd44cc43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/backward_3.png using Guid(d41b1f34886a0774a98e8c80dd44cc43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eba7d8e2fea849a4c185a4be4c04c1da') in 0.023884 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 11.207602 seconds.
+  path: Assets/Characters/Goku/down_1.png
+  artifactKey: Guid(32df56e1cc2c023429238eb94977608a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/down_1.png using Guid(32df56e1cc2c023429238eb94977608a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '288cec75db96f6c699ea73480fbf39ef') in 0.022217 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 3.628781 seconds.
+  path: Assets/Characters/Goku/down_2.png
+  artifactKey: Guid(e2504ffdfb18d3f419290ffe199c3f43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/down_2.png using Guid(e2504ffdfb18d3f419290ffe199c3f43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4673f3d47777a94d2ee13ff4ca396d5d') in 0.036778 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 4.235489 seconds.
+  path: Assets/Characters/Goku/down_3.png
+  artifactKey: Guid(957ee8194a28ddf41b80111c66fc8323) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/down_3.png using Guid(957ee8194a28ddf41b80111c66fc8323) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61741991e4930657492a836e9bfd747c') in 0.034013 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 3.299989 seconds.
+  path: Assets/Characters/Goku/down_4.png
+  artifactKey: Guid(5c662a369e4e64b4baee4d2e3f020217) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/down_4.png using Guid(5c662a369e4e64b4baee4d2e3f020217) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0071f6b1f10c7e94532063c5351c1eb3') in 0.020648 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 3.917609 seconds.
+  path: Assets/Characters/Goku/down_5.png
+  artifactKey: Guid(f73b3b7314c10cd4c828ba05db129a90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/down_5.png using Guid(f73b3b7314c10cd4c828ba05db129a90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd51b3a02778a36858bb92599fea4028f') in 0.019679 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 3.707821 seconds.
+  path: Assets/Characters/Goku/ender_1.png
+  artifactKey: Guid(3005c67ee71f1da44a169f94983d7915) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/ender_1.png using Guid(3005c67ee71f1da44a169f94983d7915) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b75d130d80bbc15085e2dc270ff01fe') in 0.021257 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 3.859091 seconds.
+  path: Assets/Characters/Goku/ender_2.png
+  artifactKey: Guid(8233711ebde89a447b45db22c5de8d6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/ender_2.png using Guid(8233711ebde89a447b45db22c5de8d6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '319562bb74afd704e41fa9886da5879b') in 0.025765 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 4.101535 seconds.
+  path: Assets/Characters/Goku/ender_3.png
+  artifactKey: Guid(1c04a151cc8b7d64b9972cd3580a0535) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/ender_3.png using Guid(1c04a151cc8b7d64b9972cd3580a0535) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc2e8aabf3e46e2b6d947ed332ed1266') in 0.023703 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 3.406983 seconds.
+  path: Assets/Characters/Goku/ender_4.png
+  artifactKey: Guid(422c75bd7ce8c414fafd8ceb98c64cda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/ender_4.png using Guid(422c75bd7ce8c414fafd8ceb98c64cda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '977977e128eec073ca0f6a40aba00803') in 0.034369 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 3.333790 seconds.
+  path: Assets/Characters/Goku/ender_5.png
+  artifactKey: Guid(80d848d816276c848aef35e7b9b3f1fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/ender_5.png using Guid(80d848d816276c848aef35e7b9b3f1fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e8b6d86b372835cc133ceb29cdcab44') in 0.035813 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 3.567121 seconds.
+  path: Assets/Characters/Goku/ender_6.png
+  artifactKey: Guid(98daeca63477e994cbb8ebe1e00e0bd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/ender_6.png using Guid(98daeca63477e994cbb8ebe1e00e0bd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70ce9a31afc128c0585f5e037e1f8a66') in 0.035585 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 3.632392 seconds.
+  path: Assets/Characters/Goku/forward_1.png
+  artifactKey: Guid(384b919ecfdaf7c47b6f1e31274907ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/forward_1.png using Guid(384b919ecfdaf7c47b6f1e31274907ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7b4e56cc3dcfeeab647f3df8ea1d295') in 0.037815 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 3.002686 seconds.
+  path: Assets/Characters/Goku/forward_2.png
+  artifactKey: Guid(d4340062a51e6c449a34fc411225fbd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/forward_2.png using Guid(d4340062a51e6c449a34fc411225fbd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7803bf49f699fa813cd46e5f58e13ad6') in 0.022926 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 3.217154 seconds.
+  path: Assets/Characters/Goku/forward_3.png
+  artifactKey: Guid(5773b734be3ad0d4f9333f1211eef528) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/forward_3.png using Guid(5773b734be3ad0d4f9333f1211eef528) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26fa03ae2b3f5878158c11d06458d004') in 0.023165 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 3.203314 seconds.
+  path: Assets/Characters/Goku/goku_block_1.png
+  artifactKey: Guid(12894a0027fc0544185105b0f3008dad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/goku_block_1.png using Guid(12894a0027fc0544185105b0f3008dad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4cfa2f5b214081c665370e7d0519b85') in 0.020056 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 3.754923 seconds.
+  path: Assets/Characters/Goku/goku_block_2.png
+  artifactKey: Guid(92288dc85a0de71448e71e70a12b85fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/goku_block_2.png using Guid(92288dc85a0de71448e71e70a12b85fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd33e2ba94d7b5f4030b2746f8707e0c') in 0.035374 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 4.625736 seconds.
+  path: Assets/Characters/Goku/goku_block_3.png
+  artifactKey: Guid(b3db504366f0547409da2bcf10daeb21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/goku_block_3.png using Guid(b3db504366f0547409da2bcf10daeb21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2b94fac38cf760fad3145afc649f1d3') in 0.020578 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 9.252041 seconds.
+  path: Assets/Characters/Goku/kick_1.png
+  artifactKey: Guid(6e58d09b419d25c4cab41b8c2a9e8dda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/kick_1.png using Guid(6e58d09b419d25c4cab41b8c2a9e8dda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '926b6b5bb166bf94e953621eeebe7746') in 0.024602 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 3.305616 seconds.
+  path: Assets/Characters/Goku/kick_2.png
+  artifactKey: Guid(c91f12ee155174f4e9cf464ef59a2ae5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/kick_2.png using Guid(c91f12ee155174f4e9cf464ef59a2ae5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9380aefda60e40626891924d887bbbc') in 0.022521 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 3.169834 seconds.
+  path: Assets/Characters/Goku/kick_3.png
+  artifactKey: Guid(94dd4519e11de0d4598d963ab4dcea26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/kick_3.png using Guid(94dd4519e11de0d4598d963ab4dcea26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c24ac8105e32c7f904b30a743e1a6e24') in 0.022624 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 3.590200 seconds.
+  path: Assets/Characters/Goku/kick_4.png
+  artifactKey: Guid(109500c488d53724bb1d8616483786a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/kick_4.png using Guid(109500c488d53724bb1d8616483786a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db10754207fdee165e1927eb7c014efe') in 0.022182 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 3.418411 seconds.
+  path: Assets/Characters/Goku/kick_5.png
+  artifactKey: Guid(032ae18518340d24c9b2c86a63ed0ff0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/kick_5.png using Guid(032ae18518340d24c9b2c86a63ed0ff0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d44f95e0d6ae29e5293dee542a84ea2') in 0.037010 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 3.231253 seconds.
+  path: Assets/Characters/Goku/punch_1.png
+  artifactKey: Guid(eef5bff2eb008624d9eb00e5ffd09f24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/punch_1.png using Guid(eef5bff2eb008624d9eb00e5ffd09f24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3fe3e66249d992e5b637df522f9c269') in 0.021791 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 3.227359 seconds.
+  path: Assets/Characters/Goku/punch_2.png
+  artifactKey: Guid(31af14a4271378344a623f1e84dab26b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/punch_2.png using Guid(31af14a4271378344a623f1e84dab26b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70688307b669647f8a89b58fc8c41316') in 0.022346 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 3.652586 seconds.
+  path: Assets/Characters/Goku/punch_3.png
+  artifactKey: Guid(dcbdab0d2f7518b4f8814f29342f1ab4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/punch_3.png using Guid(dcbdab0d2f7518b4f8814f29342f1ab4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a1b81a75edd0a8d6245bff83de86119') in 0.025838 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 3.410558 seconds.
+  path: Assets/Characters/Goku/punch_4.png
+  artifactKey: Guid(b1f996b150af83f4bbdb59f6c35262f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/punch_4.png using Guid(b1f996b150af83f4bbdb59f6c35262f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49abf7476ffd85eb0aae098027bb0f5f') in 0.021387 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 3.554820 seconds.
+  path: Assets/Characters/Goku/up_1.png
+  artifactKey: Guid(c15d52e84d9069244ad69205744dc595) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/up_1.png using Guid(c15d52e84d9069244ad69205744dc595) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94ffa853d233c7c22ec619fe2db7eea0') in 0.036294 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 3.533342 seconds.
+  path: Assets/Characters/Goku/up_2.png
+  artifactKey: Guid(4dea6d54c060fb74399ef929e6e174eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Characters/Goku/up_2.png using Guid(4dea6d54c060fb74399ef929e6e174eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bc6937dd9597623c80f673a6621f2a3') in 0.034230 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.474 seconds
+Refreshing native plugins compatible for Editor in 4.80 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.041 seconds
+Domain Reload Profiling: 1511ms
+	BeginReloadAssembly (166ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (10ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (32ms)
+	RebuildCommonClasses (31ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (33ms)
+	LoadAllAssembliesAndSetupDomain (229ms)
+		LoadAssemblies (311ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (11ms)
+			TypeCache.Refresh (5ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (1041ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (463ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (11ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (73ms)
+			ProcessInitializeOnLoadAttributes (327ms)
+			ProcessInitializeOnLoadMethodAttributes (38ms)
+			AfterProcessingInitializeOnLoad (11ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (17ms)
+Refreshing native plugins compatible for Editor in 7.17 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4029 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 42 unused Assets / (216.7 KB). Loaded Objects now: 4555.
+Memory consumption went from 159.5 MB to 159.2 MB.
+Total: 3.799300 ms (FindLiveObjects: 0.336700 ms CreateObjectMapping: 0.286800 ms MarkObjects: 3.011800 ms  DeleteObjects: 0.163000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
