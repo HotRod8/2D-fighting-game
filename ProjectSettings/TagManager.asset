@@ -41,3 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Players
+    uniqueID: 249430007
+    locked: 0
+  - name: Health Hud
+    uniqueID: 2136261659
+    locked: 0
