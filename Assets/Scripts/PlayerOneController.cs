@@ -52,11 +52,18 @@ public class PlayerOneController : MonoBehaviour
         bool moveLeftKeyPressed = xInput < 0.0f;
         bool moveUpKeyPressed = yInput > 0.0f;
         bool moveDownKeyPressed = yInput < 0.0f;
+        bool blockKeyPressed = Input.GetKey(blockKey);
 
         // Sets the first parameter to TRUE if the second parameter is TRUE, otherwise FALSE.
         animator.SetBool("isPunching", Input.GetKey(punchKey));
         animator.SetBool("isKicking", Input.GetKey(kickKey));
-        animator.SetBool("isBlocking", Input.GetKey(blockKey));
+        animator.SetBool("isBlocking", blockKeyPressed);
+
+        //**********************
+        // COLLISION DETECTION *
+        //**********************
+
+        bool isOnGround = animator.GetBool("isOnGround");
 
         //***********
         // VELOCITY *
@@ -64,13 +71,16 @@ public class PlayerOneController : MonoBehaviour
 
         // Calculate the new velocity based on input.
         Vector2 movement = new Vector2(xInput, yInput);
-        body.velocity = movement * moveSpeed;
 
-        //************
-        // COLLISION *
-        //************
-
-        bool isOnGround = animator.GetBool("isOnGround");
+        // Only move player when not crouching and not blocking.
+        if ((isOnGround && moveDownKeyPressed) || blockKeyPressed)
+        {
+            body.velocity = Vector2.zero;
+        }
+        else
+        {
+            body.velocity = movement * moveSpeed;
+        }
 
         //*************************
         // FACING DIRECTION LOGIC *
