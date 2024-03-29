@@ -131,20 +131,4 @@ public class PlayerOneController : MonoBehaviour
             animator.SetBool("isOnGround", false);
         }
     }
-
-    //*****************
-    // Helper Methods *
-    //*****************
-
-    void ClearAnimatorBools()
-    // Sets all the boolean values in the animator to false
-    {
-        foreach (AnimatorControllerParameter parameter in animator.parameters)
-        {
-            if (parameter.type == AnimatorControllerParameterType.Bool)
-            {
-                animator.SetBool(parameter.name, false);
-            }
-        }
-    }
 }
