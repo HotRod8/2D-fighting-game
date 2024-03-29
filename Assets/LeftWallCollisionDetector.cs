@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,17 +25,19 @@ public class LeftWallCollisionDetector : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "Camera Left Wall")
+        if (collision.gameObject.name == "Stage Left Wall")
         {
             collisionDetected = true;
+            Debug.Log("LEFT WALL ENTER");
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "Camera left Wall")
+        if (collision.gameObject.name == "Stage Left Wall")
         {
             collisionDetected = false;
+            Debug.Log("LEFT WALL EXIT");
         }
     }
 }

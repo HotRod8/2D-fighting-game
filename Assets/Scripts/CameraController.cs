@@ -37,10 +37,28 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Center the camera between player 1 and player 2 if camera walls are not colliding with stage walls.
         transform.position = new Vector3(
             (player1.transform.position.x + player2.transform.position.x) / 2.0f,
             transform.position.y,
-            transform.position.z);
+            transform.position.z
+            );
+
+        if (transform.position.x < -7.0f)
+        {
+            transform.position = new Vector3(
+                -7.0f,
+                transform.position.y,
+                transform.position.z
+                );
+        }
+        else if (transform.position.x > 7.0f)
+        {
+            transform.position = new Vector3(
+                7.0f,
+                transform.position.y,
+                transform.position.z
+                );
+        }
+
     }
 }
