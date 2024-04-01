@@ -24,6 +24,11 @@ public class PlayerOneController : MonoBehaviour
     private Animator animator;
     private Rigidbody2D body;
     private SpriteRenderer sprite;
+    private AudioSource soundEffects;
+    public AudioClip punchSound;
+    public AudioClip kickSound;
+    public AudioClip sweepSound;
+    public AudioClip landingSound;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +40,7 @@ public class PlayerOneController : MonoBehaviour
         animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
+        soundEffects = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -109,6 +115,34 @@ public class PlayerOneController : MonoBehaviour
 
         animator.SetBool("isMovingUp", moveUpKeyPressed);
         animator.SetBool("isMovingDown", moveDownKeyPressed);
+    }
+
+    //*********************
+    // SOUND EFFECT LOGIC *
+    //*********************
+
+    public void PunchSound()
+    {
+        soundEffects.clip = punchSound;
+        soundEffects.Play();
+    }
+
+    public void KickSound()
+    {
+        soundEffects.clip = kickSound;
+        soundEffects.Play();
+    }
+
+    public void SweepSound()
+    {
+        soundEffects.clip = sweepSound;
+        soundEffects.Play();
+    }
+
+    public void LandingSound()
+    {
+        soundEffects.clip = landingSound;
+        soundEffects.Play();
     }
 
     //*********************************

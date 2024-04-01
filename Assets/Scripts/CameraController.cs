@@ -8,6 +8,12 @@ public class CameraController : MonoBehaviour
     // FIELDS *
     //*********
 
+    private GameObject cameraLeftWall;
+    private GameObject cameraRightWall;
+
+    private GameObject stageLeftWall;
+    private GameObject stageRightWall;
+
     private GameObject player1;
     private GameObject player2;
 
@@ -18,6 +24,12 @@ public class CameraController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        cameraLeftWall = GameObject.Find("Main Camera");
+        cameraRightWall = GameObject.Find("Main Camera");
+
+        stageLeftWall = GameObject.Find("Stage Left Wall");
+        stageRightWall = GameObject.Find("Stage Right Wall");
+
         player1 = GameObject.Find("Player 1");
         player2 = GameObject.Find("Player 2");
     }

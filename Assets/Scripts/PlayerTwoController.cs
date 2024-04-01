@@ -25,6 +25,11 @@ public class PlayerTwoController : MonoBehaviour
     private Animator animator;
     private Rigidbody2D body;
     private SpriteRenderer sprite;
+    private AudioSource soundEffects;
+    public AudioClip punchSound;
+    public AudioClip kickSound;
+    public AudioClip enderSound;
+    public AudioClip landingSound;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +41,7 @@ public class PlayerTwoController : MonoBehaviour
         animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
+        soundEffects = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -59,11 +65,11 @@ public class PlayerTwoController : MonoBehaviour
         animator.SetBool("isPunching", Input.GetKey(punchKey));
         animator.SetBool("isKicking", Input.GetKey(kickKey));
         animator.SetBool("isOverhead", Input.GetKey(overheadKey));
-        animator.SetBool("isBlocking", Input.GetKey(blockKey));
+        animator.SetBool("isBlocking", blockKeyPressed);
 
         //***********************
         // COLLISION  DETECTION *
-        //************************
+        //***********************
 
         bool isOnGround = animator.GetBool("isOnGround");
 
@@ -111,6 +117,34 @@ public class PlayerTwoController : MonoBehaviour
 
         animator.SetBool("isMovingUp", moveUpKeyPressed);
         animator.SetBool("isMovingDown", moveDownKeyPressed);
+    }
+
+    //*********************
+    // SOUND EFFECT LOGIC *
+    //*********************
+
+    public void PunchSound()
+    {
+        soundEffects.clip = punchSound;
+        soundEffects.Play();
+    }
+
+    public void KickSound()
+    {
+        soundEffects.clip = kickSound;
+        soundEffects.Play();
+    }
+
+    public void EnderSound()
+    {
+        soundEffects.clip = enderSound;
+        soundEffects.Play();
+    }
+
+    public void LandingSound()
+    {
+        soundEffects.clip = landingSound;
+        soundEffects.Play();
     }
 
     //*********************************
