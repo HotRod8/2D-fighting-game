@@ -30,6 +30,8 @@ public class PlayerOneController : MonoBehaviour
     public AudioClip sweepSound;
     public AudioClip landingSound;
 
+    private bool isOnGroundBefore = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -70,6 +72,17 @@ public class PlayerOneController : MonoBehaviour
         //**********************
 
         bool isOnGround = animator.GetBool("isOnGround");
+
+        //**********************
+        // LANDING SOUND LOGIC *
+        //**********************
+
+        if (!isOnGroundBefore && isOnGround)
+        {
+            LandingSound();
+        }
+
+        isOnGroundBefore = isOnGround;
 
         //***********
         // VELOCITY *
