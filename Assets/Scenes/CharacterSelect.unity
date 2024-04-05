@@ -217,6 +217,8 @@ GameObject:
   m_Component:
   - component: {fileID: 323047002}
   - component: {fileID: 323047001}
+  - component: {fileID: 323047003}
+  - component: {fileID: 323047004}
   m_Layer: 0
   m_Name: P2 Cursor
   m_TagString: Untagged
@@ -291,6 +293,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &323047003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323047000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6db8220311d9c6343aa0190e0e25fa41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveLeftKey: 276
+  moveRightKey: 275
+  enterKey: 13
+  characterSelectionManager: {fileID: 0}
+--- !u!114 &323047004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323047000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b281f45a048bbf546b324182a261f8dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterPrefabs:
+  - {fileID: 760610924}
+  - {fileID: 1737633220}
 --- !u!1 &438856645
 GameObject:
   m_ObjectHideFlags: 0
@@ -716,6 +749,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1328915282}
   - component: {fileID: 1328915281}
+  - component: {fileID: 1328915283}
+  - component: {fileID: 1328915284}
   m_Layer: 0
   m_Name: P1 Cursor
   m_TagString: Untagged
@@ -790,6 +825,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1328915283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328915280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6db8220311d9c6343aa0190e0e25fa41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveLeftKey: 97
+  moveRightKey: 100
+  enterKey: 13
+  characterSelectionManager: {fileID: 0}
+--- !u!114 &1328915284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328915280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b281f45a048bbf546b324182a261f8dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterPrefabs:
+  - {fileID: 760610924}
+  - {fileID: 1737633220}
 --- !u!1 &1393422405
 GameObject:
   m_ObjectHideFlags: 0
