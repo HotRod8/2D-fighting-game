@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerOneController : MonoBehaviour
 {
@@ -20,6 +23,7 @@ public class PlayerOneController : MonoBehaviour
     public KeyCode punchKey = KeyCode.G;
     public KeyCode kickKey = KeyCode.H;
     public KeyCode blockKey = KeyCode.B;
+    public KeyCode escapeKey = KeyCode.Escape;
 
     private Animator animator;
     private Rigidbody2D body;
@@ -45,9 +49,24 @@ public class PlayerOneController : MonoBehaviour
         soundEffects = GetComponent<AudioSource>();
     }
 
+    public void Pause()
+    {
+        SceneManager.LoadScene("OptionMenuScreen");
+    }
+
     // Update is called once per frame
     void Update()
     {
+
+        //*************************
+        // Pause Method *
+        //*************************
+
+        if (Input.GetKeyDown(escapeKey))
+        {
+            Pause();
+        }
+
         //*************************
         // KEY / CONTROLLER INPUT *
         //*************************
