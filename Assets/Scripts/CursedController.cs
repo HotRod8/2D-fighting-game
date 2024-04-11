@@ -47,10 +47,13 @@ public class CursedController : MonoBehaviour
 
 
         // Allow movement only if the selection hasn't been locked.
-        if ((Input.GetKey(moveLeftKey) || Input.GetKey(moveRightKey)) && !isSelectionLocked)
+        if (!isSelectionLocked)
         {
-            // Movement logic
-            transform.position = new Vector3(transform.position.x * -1, transform.position.y, transform.position.z);
+            if (Input.GetKey(moveLeftKey) && transform.position.x > 0 || Input.GetKey(moveRightKey) && transform.position.x < 0)
+            {
+                // Movement logic
+                transform.position = new Vector3(transform.position.x * -1, transform.position.y, transform.position.z);
+            }
         }
     }
 }
