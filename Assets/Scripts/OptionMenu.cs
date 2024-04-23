@@ -8,7 +8,15 @@ using UnityEditor;
 
 public class OptionMenu : MonoBehaviour
 {
-    private float previousTimeScale;
+    public GameObject pauseMenu;
+    public static bool isPaused;
+
+    public GameObject backgroundUI;
+    public GameObject healthBars;
+    public GameObject timer;
+    public GameObject player1;
+    public GameObject player2;
+
 
     public Slider music;
     public Slider gameVolume;
@@ -20,17 +28,50 @@ public class OptionMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PauseGame();
+        pauseMenu.SetActive(false);
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (!isPaused)
+            {
+                PauseGame();
+            }
+            else
+            {
+                ResumeGame();
+            }
+
+        }
     }
 
     public void PauseGame()
     {
-        previousTimeScale = Time.timeScale;
-        Time.timeScale = 0;
+        backgroundUI.SetActive(false);
+        player1.SetActive(false);
+        player2.SetActive(false);
+        timer.SetActive(false);
+        healthBars.SetActive(false);
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0f;
+        isPaused = true;
     }
-    public void Continue()
+    public void ResumeGame()
     {
-        Time.timeScale = previousTimeScale;
+        backgroundUI.SetActive(true);
+        player1.SetActive(true);
+        player2.SetActive(true);
+        timer.SetActive(true);
+        healthBars.SetActive(true);
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1f;
+        isPaused = false;
+    }
+
+    public void RestartGame()
+    {;
         SceneManager.LoadScene("SampleScene");
     }
 
@@ -45,12 +86,4 @@ public class OptionMenu : MonoBehaviour
         GameVolMixer.SetFloat("GameLevel", gameVolume.value);
     }
 
-    void Update()
-    {
-
-        if (Input.GetKeyDown(escapeKey))
-        {
-            Continue();
-        }
-    }
 }

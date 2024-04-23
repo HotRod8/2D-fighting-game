@@ -11,8 +11,6 @@ public class TimerScript : MonoBehaviour
 
     public TextMeshProUGUI timerTxt;
 
-    public KeyCode escapeKey = KeyCode.Escape;
-
     void Start()
     {
         //Each round should last a minute at most
@@ -22,16 +20,13 @@ public class TimerScript : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(escapeKey))
+        if (OptionMenu.isPaused)
         {
-            if (timerOn)
-            {
-                PauseTimer();
-            }
-            else
-            {
-                ResumeTimer();
-            }
+            PauseTimer();
+        }
+        else
+        {
+            ResumeTimer();
         }
 
         if (timerOn)

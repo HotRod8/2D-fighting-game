@@ -23,7 +23,6 @@ public class PlayerOneController : MonoBehaviour
     public KeyCode punchKey = KeyCode.G;
     public KeyCode kickKey = KeyCode.H;
     public KeyCode blockKey = KeyCode.B;
-    public KeyCode escapeKey = KeyCode.Escape;
 
     private Animator animator;
     private Rigidbody2D body;
@@ -57,15 +56,6 @@ public class PlayerOneController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        //*************************
-        // Pause Method *
-        //*************************
-
-        if (Input.GetKeyDown(escapeKey))
-        {
-            Pause();
-        }
 
         //*************************
         // KEY / CONTROLLER INPUT *
