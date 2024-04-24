@@ -12,6 +12,7 @@ public class MainMenuOptions : MonoBehaviour
     public static bool isPaused;
 
     public GameObject mainMenu;
+    public GameObject controlsMenu;
     public Slider music;
     public Slider gameVolume;
     public AudioMixer MusicVolMixer;
@@ -23,24 +24,45 @@ public class MainMenuOptions : MonoBehaviour
     void Start()
     {
         pauseMenu.SetActive(false);
+        controlsMenu.SetActive(false);
     }
 
     void Update()
     {
+        // Check if Escape key is pressed
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (!isPaused)
+            // If the controls menu is active, return to the pause menu
+            if (controlsMenu.activeSelf)
             {
-                PauseGame();
+                ReturnToPauseMenu();
             }
+            // Otherwise, toggle pause/resume game
             else
             {
-                ResumeGame();
+                TogglePause();
             }
-
         }
     }
 
+    void TogglePause()
+    {
+        if (!isPaused)
+        {
+            PauseGame();
+        }
+        else
+        {
+            ResumeGame();
+        }
+    }
+
+    // Method to return from controls menu to pause menu
+    void ReturnToPauseMenu()
+    {
+        controlsMenu.SetActive(false);
+        pauseMenu.SetActive(true);
+    }
     public void PauseGame()
     {
         mainMenu.SetActive(false);
@@ -56,9 +78,14 @@ public class MainMenuOptions : MonoBehaviour
         isPaused = false;
     }
 
+    public void ShowControls()
+    {
+        pauseMenu.SetActive(false);
+        controlsMenu.SetActive(true);
+    }
+
     public void RestartGame()
     {
-        ;
         SceneManager.LoadScene("SampleScene");
     }
 

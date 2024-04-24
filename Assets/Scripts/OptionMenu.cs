@@ -16,6 +16,7 @@ public class OptionMenu : MonoBehaviour
     public GameObject timer;
     public GameObject player1;
     public GameObject player2;
+    public GameObject controlsMenu;
 
 
     public Slider music;
@@ -29,24 +30,45 @@ public class OptionMenu : MonoBehaviour
     void Start()
     {
         pauseMenu.SetActive(false);
+        controlsMenu.SetActive(false);
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (!isPaused)
+            if (controlsMenu.activeSelf)
             {
-                PauseGame();
+                ReturnToPauseMenu();
             }
             else
             {
-                ResumeGame();
+                TogglePause();
             }
-
         }
     }
+    public void ShowControls()
+    {
+        pauseMenu.SetActive(false);
+        controlsMenu.SetActive(true);
+    }
+    void ReturnToPauseMenu()
+    {
+        controlsMenu.SetActive(false);
+        pauseMenu.SetActive(true);
+    }
 
+    void TogglePause()
+    {
+        if (!isPaused)
+        {
+            PauseGame();
+        }
+        else
+        {
+            ResumeGame();
+        }
+    }
     public void PauseGame()
     {
         backgroundUI.SetActive(false);
