@@ -1,8 +1,9 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class StartGameButton : MonoBehaviour {
-    //public int characterScene; // 0 is false, and all pos are true
+    public Button startButton;
     ////Only uses pos nums that have scenes.
 
     //public void StartGame(){
@@ -20,9 +21,12 @@ public class StartGameButton : MonoBehaviour {
     void Start ()
     {
         selectIndicator.SetActive (false);
+        startButton.onClick.AddListener(OnStartClicked);
     }
-    void Update ()
+
+    void OnStartClicked ()
     {
-        selectIndicator.SetActive (selected);
+        selectIndicator.SetActive(selected);
+        SceneManager.LoadScene("CharacterSelect");
     }
 }

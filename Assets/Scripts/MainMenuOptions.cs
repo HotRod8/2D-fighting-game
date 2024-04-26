@@ -6,19 +6,13 @@ using UnityEngine.UI;
 using UnityEngine.Audio;
 using UnityEditor;
 
-public class OptionMenu : MonoBehaviour
+public class MainMenuOptions : MonoBehaviour
 {
     public GameObject pauseMenu;
     public static bool isPaused;
 
-    public GameObject backgroundUI;
-    public GameObject healthBars;
-    public GameObject timer;
-    public GameObject player1;
-    public GameObject player2;
+    public GameObject mainMenu;
     public GameObject controlsMenu;
-
-
     public Slider music;
     public Slider gameVolume;
     public AudioMixer MusicVolMixer;
@@ -35,27 +29,20 @@ public class OptionMenu : MonoBehaviour
 
     void Update()
     {
+        // Check if Escape key is pressed
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            // If the controls menu is active, return to the pause menu
             if (controlsMenu.activeSelf)
             {
                 ReturnToPauseMenu();
             }
+            // Otherwise, toggle pause/resume game
             else
             {
                 TogglePause();
             }
         }
-    }
-    public void ShowControls()
-    {
-        pauseMenu.SetActive(false);
-        controlsMenu.SetActive(true);
-    }
-    void ReturnToPauseMenu()
-    {
-        controlsMenu.SetActive(false);
-        pauseMenu.SetActive(true);
     }
 
     void TogglePause()
@@ -69,31 +56,36 @@ public class OptionMenu : MonoBehaviour
             ResumeGame();
         }
     }
+
+    // Method to return from controls menu to pause menu
+    void ReturnToPauseMenu()
+    {
+        controlsMenu.SetActive(false);
+        pauseMenu.SetActive(true);
+    }
     public void PauseGame()
     {
-        backgroundUI.SetActive(false);
-        player1.SetActive(false);
-        player2.SetActive(false);
-        timer.SetActive(false);
-        healthBars.SetActive(false);
+        mainMenu.SetActive(false);
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
     }
     public void ResumeGame()
     {
-        backgroundUI.SetActive(true);
-        player1.SetActive(true);
-        player2.SetActive(true);
-        timer.SetActive(true);
-        healthBars.SetActive(true);
+        mainMenu.SetActive(true);
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
     }
 
+    public void ShowControls()
+    {
+        pauseMenu.SetActive(false);
+        controlsMenu.SetActive(true);
+    }
+
     public void RestartGame()
-    {;
+    {
         SceneManager.LoadScene("SampleScene");
     }
 

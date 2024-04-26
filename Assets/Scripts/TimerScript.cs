@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class TimerScript : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class TimerScript : MonoBehaviour
 
     public TextMeshProUGUI timerTxt;
 
-    public KeyCode escapeKey = KeyCode.Escape;
+    public UnityEvent onTimerComplete;
 
     void Start()
     {
@@ -22,16 +23,13 @@ public class TimerScript : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(escapeKey))
+        if (OptionMenu.isPaused)
         {
-            if (timerOn)
-            {
-                PauseTimer();
-            }
-            else
-            {
-                ResumeTimer();
-            }
+            PauseTimer();
+        }
+        else
+        {
+            ResumeTimer();
         }
 
         if (timerOn)
@@ -46,6 +44,7 @@ public class TimerScript : MonoBehaviour
                 Debug.Log("TIME'S UP!");
                 timeLeft = 0;
                 timerOn = false;
+                onTimerComplete?.Invoke();
             }
         }
     }
@@ -67,6 +66,12 @@ public class TimerScript : MonoBehaviour
 
     public void ResumeTimer()
     {
+        timerOn = true;
+    }
+
+    public void ResetTimer(float duration = 60)
+    {
+        timeLeft = duration;
         timerOn = true;
     }
 }

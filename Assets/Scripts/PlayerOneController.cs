@@ -36,7 +36,6 @@ public class PlayerOneController : MonoBehaviour
     public KeyCode punchKey = KeyCode.G;
     public KeyCode kickKey = KeyCode.H;
     public KeyCode blockKey = KeyCode.B;
-    public KeyCode escapeKey = KeyCode.Escape;
 
     private Animator animator;
     private Rigidbody2D body;
@@ -92,15 +91,6 @@ public class PlayerOneController : MonoBehaviour
             if (sweepTimer == 7) { StopSweep(); }
             if (sweepTimer < 120) { ++sweepTimer; }
             else { sweepTimer = 0; }
-        }
-
-        //*************************
-        // Pause Method *
-        //*************************
-
-        if (Input.GetKeyDown(escapeKey))
-        {
-            Pause();
         }
 
         //*************************
