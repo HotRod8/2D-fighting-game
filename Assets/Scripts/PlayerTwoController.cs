@@ -11,6 +11,14 @@ public class PlayerTwoController : MonoBehaviour
     // Fields for Player 2 *
     //**********************
 
+    public GameObject punchPoint;
+    public GameObject kickPoint;
+    public float punchRadius;
+    public float kickRadius;
+    public float punchDamage;
+    public float kickDamage;
+    public LayerMask enemies;
+
     public float moveSpeed = 10.0f;
 
     public KeyCode moveLeftKey = KeyCode.LeftArrow;
@@ -31,6 +39,9 @@ public class PlayerTwoController : MonoBehaviour
     public AudioClip enderSound;
     public AudioClip landingSound;
 
+    private int punchTimer = 0;
+    private int kickTimer = 0;
+
     private bool isOnGroundBefore = false;
 
     // Start is called before the first frame update
@@ -49,6 +60,20 @@ public class PlayerTwoController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (punchTimer > 0)
+        {
+            if (punchTimer == 4) { StopPunch(); }
+            if (punchTimer < 120) { ++punchTimer; }
+            else { punchTimer = 0; }
+        }
+        else if (kickTimer > 0)
+        {
+            if (kickTimer == 6) { StopKick(); }
+            if (kickTimer < 120) { ++kickTimer; }
+            else { kickTimer = 0; }
+        }
+
         //*************************
         // KEY / CONTROLLER INPUT *
         //*************************
@@ -64,9 +89,14 @@ public class PlayerTwoController : MonoBehaviour
         bool blockKeyPressed = Input.GetKey(blockKey);
 
         // Sets the first parameter to TRUE if the second parameter is TRUE, otherwise FALSE.
-        animator.SetBool("isPunching", Input.GetKey(punchKey));
-        animator.SetBool("isKicking", Input.GetKey(kickKey));
-        animator.SetBool("isOverhead", Input.GetKey(overheadKey));
+        if (Input.GetKey(punchKey) && !hasAttacked())
+        {
+            StartPunch();
+        }
+        else if (Input.GetKey(kickKey) && !hasAttacked())
+        {
+            StartKick();
+        }
         animator.SetBool("isBlocking", blockKeyPressed);
 
         //***********************
@@ -178,5 +208,57 @@ public class PlayerTwoController : MonoBehaviour
         {
             animator.SetBool("isOnGround", false);
         }
+    }
+
+    public void StartPunch()
+    {
+        animator.SetBool("isPunching", true);
+        ++punchTimer;
+    }
+    public void StopPunch()
+    {
+        animator.SetBool("isPunching", false);
+    }
+    public void StartKick()
+    {
+        animator.SetBool("isKicking", true);
+        ++kickTimer;
+    }
+    public void StopKick()
+    {
+        animator.SetBool("isKicking", false);
+    }
+
+    private bool hasAttacked()
+    {
+        return (punchTimer > 0 || kickTimer > 0);
+    }
+
+    public void punch()
+    {
+        Collider2D[] enemy = Physics2D.OverlapCircleAll(punchPoint.transform.position, punchRadius, enemies);
+
+        foreach (Collider2D enemyGameObject in enemy)
+        {
+            UnityEngine.Debug.Log("Punched Player 1");
+            player1.GetComponent<PlayerOneHealth>().health -= punchDamage;
+        }
+    }
+
+    public void kick()
+    {
+        Collider2D[] enemy = Physics2D.OverlapCircleAll(kickPoint.transform.position, kickRadius, enemies);
+
+        foreach (Collider2D enemyGameObject in enemy)
+        {
+            UnityEngine.Debug.Log("Kicked Player 1");
+            player1.GetComponent<PlayerOneHealth>().health -= kickDamage;
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(punchPoint.transform.position, punchRadius);
+        Gizmos.DrawWireSphere(kickPoint.transform.position, kickRadius);
     }
 }

@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: vegeta_punch_1
+  m_Name: vegeta_hit
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,19 +21,25 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 21300000, guid: a57f847c1d0aa564387a70b3603177d7, type: 3}
-    - time: 0.0625
-      value: {fileID: 21300000, guid: 56a344c43f781984499238d77cd49a84, type: 3}
-    - time: 0.125
-      value: {fileID: 21300000, guid: a1743e7e1db24144ab3c5250cb347495, type: 3}
-    - time: 0.1875
-      value: {fileID: 21300000, guid: 4e43f89c3bfb07c4182ae78e8799dce6, type: 3}
+      value: {fileID: 21300000, guid: 9f002d856cb92394aa06f861dfce788b, type: 3}
+    - time: 0.033333335
+      value: {fileID: 21300000, guid: 444482620fe65f748af8f796731fbffb, type: 3}
+    - time: 0.06666667
+      value: {fileID: 21300000, guid: f126b5c246f93e746acc0b1bca254b7d, type: 3}
+    - time: 0.1
+      value: {fileID: 21300000, guid: 02765fd4a29b81347b236239644985fd, type: 3}
+    - time: 0.13333334
+      value: {fileID: 21300000, guid: 7753d7d65608287438c147b5744d129c, type: 3}
+    - time: 0.16666667
+      value: {fileID: 21300000, guid: d0321876ce8825c478c59d8e06505a9e, type: 3}
+    - time: 0.2
+      value: {fileID: 21300000, guid: b76042daea7c1364fbcfad874630b1fb, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
     flags: 2
-  m_SampleRate: 16
+  m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -50,16 +56,19 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 21300000, guid: a57f847c1d0aa564387a70b3603177d7, type: 3}
-    - {fileID: 21300000, guid: 56a344c43f781984499238d77cd49a84, type: 3}
-    - {fileID: 21300000, guid: a1743e7e1db24144ab3c5250cb347495, type: 3}
-    - {fileID: 21300000, guid: 4e43f89c3bfb07c4182ae78e8799dce6, type: 3}
+    - {fileID: 21300000, guid: 9f002d856cb92394aa06f861dfce788b, type: 3}
+    - {fileID: 21300000, guid: 444482620fe65f748af8f796731fbffb, type: 3}
+    - {fileID: 21300000, guid: f126b5c246f93e746acc0b1bca254b7d, type: 3}
+    - {fileID: 21300000, guid: 02765fd4a29b81347b236239644985fd, type: 3}
+    - {fileID: 21300000, guid: 7753d7d65608287438c147b5744d129c, type: 3}
+    - {fileID: 21300000, guid: d0321876ce8825c478c59d8e06505a9e, type: 3}
+    - {fileID: 21300000, guid: b76042daea7c1364fbcfad874630b1fb, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.25
+    m_StopTime: 0.21666667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -80,14 +89,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: SweepSound
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.0625
-    functionName: punch
+    functionName: 
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
