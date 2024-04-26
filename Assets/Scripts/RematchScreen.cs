@@ -12,16 +12,18 @@ public class RematchScreen : MonoBehaviour
     public GameObject player1;
     public GameObject player2;
 
-    public Button yesButton;
-    public Button noButton;
+    public Button rematchButton;
+    public Button changeButton;
+    public Button homeButton;
 
     private TimerScript timerScript;  // Reference to the TimerScript
 
     void Start()
     {
         rematchScreen.SetActive(false);
-        yesButton.onClick.AddListener(OnYesClicked);
-        noButton.onClick.AddListener(OnNoClicked);
+        rematchButton.onClick.AddListener(OnRematchClicked);
+        changeButton.onClick.AddListener(OnChangeClicked);
+        homeButton.onClick.AddListener(OnHomeClicked);
 
         // Get the TimerScript from the timer GameObject
         timerScript = timerGameObject.GetComponent<TimerScript>();
@@ -44,15 +46,20 @@ public class RematchScreen : MonoBehaviour
         rematchScreen.SetActive(true);
     }
 
-    private void OnYesClicked()
+    private void OnRematchClicked()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);  // Reload the current scene
         if (timerScript != null)
             timerScript.ResetTimer();  // Restart the timer
     }
 
-    private void OnNoClicked()
+    private void OnChangeClicked()
     {
-        SceneManager.LoadScene("CharacterSelect");  // Load the main menu scene
+        SceneManager.LoadScene("CharacterSelect");  // Load the character select scene
+    }
+
+    private void OnHomeClicked()
+    {
+        SceneManager.LoadScene("Main Menu");  // Load the main menu scene
     }
 }

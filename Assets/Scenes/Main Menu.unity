@@ -1421,6 +1421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 168a4286606f75641a6c35be0056f925, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startButton: {fileID: 695967978}
   selectIndicator: {fileID: 765133745}
   selected: 0
 --- !u!114 &695967978
