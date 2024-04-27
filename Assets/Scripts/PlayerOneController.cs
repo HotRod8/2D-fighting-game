@@ -6,6 +6,9 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
+using UnityEngine.Events;
+
 
 public class PlayerOneController : MonoBehaviour
 {
@@ -18,14 +21,23 @@ public class PlayerOneController : MonoBehaviour
 
     public GameObject punchPoint;
     public GameObject kickPoint;
-    public GameObject sweepPoint;
+//    public GameObject sweepPoint;
     public float punchRadius;
     public float kickRadius;
     public float sweepRadius;
     public float punchDamage;
     public float kickDamage;
-    public float sweepDamage;
+//    public float sweepDamage;
     public LayerMask enemies;
+
+    [SerializeField] public RightHealthBar P2HealthBar;
+    public GameObject rematchScreen;
+    public UnityEvent onKnockOut = new UnityEvent();
+    private PlayerOneHealth P1health;
+    private PlayerTwoHealth P2health;
+    private GameObject backgroundUI;
+    public GameObject leftHealthBar;
+    public GameObject rightHealthBar;
 
     public float moveSpeed = 10.0f;
 
@@ -43,12 +55,12 @@ public class PlayerOneController : MonoBehaviour
     private AudioSource soundEffects;
     public AudioClip punchSound;
     public AudioClip kickSound;
-    public AudioClip sweepSound;
+//    public AudioClip sweepSound;
     public AudioClip landingSound;
 
     private int punchTimer = 0;
     private int kickTimer = 0;
-    private int sweepTimer = 0;
+//    private int sweepTimer = 0;
 
     private bool isOnGroundBefore = false;
 
@@ -64,6 +76,10 @@ public class PlayerOneController : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         soundEffects = GetComponent<AudioSource>();
+        rematchScreen = GameObject.Find("RematchMenu");
+        P2HealthBar = GameObject.Find("RightHealthBar").GetComponent<RightHealthBar>();
+        player2.GetComponent<PlayerTwoHealth>().health = RightHealthBar.MaxHealth;
+        onKnockOut.AddListener(ShowRematchScreen);
     }
 
     public void Pause()
@@ -86,12 +102,12 @@ public class PlayerOneController : MonoBehaviour
             if (kickTimer < 120) { ++kickTimer; }
             else { kickTimer = 0; }
         }
-        else if (sweepTimer > 0)
-        {
-            if (sweepTimer == 7) { StopSweep(); }
-            if (sweepTimer < 120) { ++sweepTimer; }
-            else { sweepTimer = 0; }
-        }
+        //else if (sweepTimer > 0)
+        //{
+        //    if (sweepTimer == 7) { StopSweep(); }
+        //    if (sweepTimer < 120) { ++sweepTimer; }
+        //    else { sweepTimer = 0; }
+        //}
 
         //*************************
         // KEY / CONTROLLER INPUT *
@@ -197,11 +213,11 @@ public class PlayerOneController : MonoBehaviour
         soundEffects.Play();
     }
 
-    public void SweepSound()
-    {
-        soundEffects.clip = sweepSound;
-        soundEffects.Play();
-    }
+    //public void SweepSound()
+    //{
+    //    soundEffects.clip = sweepSound;
+    //    soundEffects.Play();
+    //}
 
     public void LandingSound()
     {
@@ -247,18 +263,19 @@ public class PlayerOneController : MonoBehaviour
     {
         animator.SetBool("isKicking", false);
     }
-    public void StartSweep()
-    {
-        animator.SetBool("isPunching", true);
-        ++sweepTimer;
-    }
-    public void StopSweep()
-    {
-        animator.SetBool("isPunching", false);
-    }
+    //public void StartSweep()
+    //{
+    //    animator.SetBool("isPunching", true);
+    //    ++sweepTimer;
+    //}
+    //public void StopSweep()
+    //{
+    //    animator.SetBool("isPunching", false);
+    //}
     private bool hasAttacked()
     {
-        return (punchTimer > 0 || kickTimer > 0 || sweepTimer > 0);
+        return (punchTimer > 0 || kickTimer > 0);
+            //|| sweepTimer > 0);
     }
 
     public void punch()
@@ -269,6 +286,16 @@ public class PlayerOneController : MonoBehaviour
         {
             UnityEngine.Debug.Log("Punched Player 2");
             player2.GetComponent<PlayerTwoHealth>().health -= punchDamage;
+            if (player2.GetComponent<PlayerTwoHealth>().health <= 0)
+            {
+                P2HealthBar.SetSize(0);
+                rematchScreen.SetActive(true);
+                onKnockOut?.Invoke();
+            }
+            else 
+            {
+                P2HealthBar.SetSize(player2.GetComponent<PlayerTwoHealth>().health);
+            }
         }
     }
 
@@ -278,26 +305,55 @@ public class PlayerOneController : MonoBehaviour
 
         foreach (Collider2D enemyGameObject in enemy)
         {
-           UnityEngine.Debug.Log("Kicked Player 2");
-           player2.GetComponent<PlayerTwoHealth>().health -= kickDamage;
+            UnityEngine.Debug.Log("Kicked Player 2");
+            player2.GetComponent<PlayerTwoHealth>().health -= kickDamage;
+            if (player2.GetComponent<PlayerTwoHealth>().health <= 0)
+            {
+                P2HealthBar.SetSize(0);
+                rematchScreen.SetActive(true);
+                onKnockOut?.Invoke();
+            }
+            else
+            {
+                P2HealthBar.SetSize(player2.GetComponent<PlayerTwoHealth>().health);
+            }
         }
     }
 
-    public void sweep()
-    {
-        Collider2D[] enemy = Physics2D.OverlapCircleAll(sweepPoint.transform.position, sweepRadius, enemies);
+    //public void sweep()
+    //{
+    //    Collider2D[] enemy = Physics2D.OverlapCircleAll(sweepPoint.transform.position, sweepRadius, enemies);
 
-        foreach (Collider2D enemyGameObject in enemy)
-        {
-            UnityEngine.Debug.Log("Swept Player 2");
-            player2.GetComponent<PlayerTwoHealth>().health -= sweepDamage;
-        }
+    //    foreach (Collider2D enemyGameObject in enemy)
+    //    {
+    //        UnityEngine.Debug.Log("Swept Player 2");
+    //        player2.GetComponent<PlayerTwoHealth>().health -= sweepDamage;
+    //    }
+    //}
+
+    void ShowRematchScreen()
+    {
+        // Deactivate game elements
+        backgroundUI.SetActive(false);
+        player1.SetActive(false);
+        player2.SetActive(false);
+        leftHealthBar.SetActive(false);
+        rightHealthBar.SetActive(false);
+
+
+        // Activate the rematch screen
+        rematchScreen.SetActive(true);
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(punchPoint.transform.position, punchRadius);
         Gizmos.DrawWireSphere(kickPoint.transform.position, kickRadius);
-        Gizmos.DrawWireSphere(sweepPoint.transform.position, sweepRadius);
+ //       Gizmos.DrawWireSphere(sweepPoint.transform.position, sweepRadius);
+    }
+
+    void KnockOut() 
+    { 
+    
     }
 }

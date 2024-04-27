@@ -19,6 +19,8 @@ public class PlayerTwoController : MonoBehaviour
     public float kickDamage;
     public LayerMask enemies;
 
+    [SerializeField] public LeftHealthBar P1HealthBar;
+
     public float moveSpeed = 10.0f;
 
     public KeyCode moveLeftKey = KeyCode.LeftArrow;
@@ -55,6 +57,8 @@ public class PlayerTwoController : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         soundEffects = GetComponent<AudioSource>();
+        P1HealthBar = GameObject.Find("LeftHealthBar").GetComponent<LeftHealthBar>();
+        player1.GetComponent<PlayerOneHealth>().health = LeftHealthBar.MaxHealth;
     }
 
     // Update is called once per frame
@@ -242,6 +246,7 @@ public class PlayerTwoController : MonoBehaviour
         {
             UnityEngine.Debug.Log("Punched Player 1");
             player1.GetComponent<PlayerOneHealth>().health -= punchDamage;
+            P1HealthBar.SetSize(player1.GetComponent<PlayerOneHealth>().health);
         }
     }
 
@@ -253,6 +258,14 @@ public class PlayerTwoController : MonoBehaviour
         {
             UnityEngine.Debug.Log("Kicked Player 1");
             player1.GetComponent<PlayerOneHealth>().health -= kickDamage;
+            if (player1.GetComponent<PlayerOneHealth>().health <= 0)
+            {
+                P1HealthBar.SetSize(0);
+            }
+            else
+            {
+                P1HealthBar.SetSize(player1.GetComponent<PlayerOneHealth>().health);
+            }
         }
     }
 

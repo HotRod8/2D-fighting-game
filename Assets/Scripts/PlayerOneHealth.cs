@@ -24,6 +24,8 @@ public class PlayerOneHealth : MonoBehaviour
         }
         if (health <= 0)
         {
+            health = 0;
+            currentHealth = 0;
             Debug.Log("Player 1 is dead!");
         }
     }

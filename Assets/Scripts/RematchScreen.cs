@@ -21,9 +21,11 @@ public class RematchScreen : MonoBehaviour
     void Start()
     {
         rematchScreen.SetActive(false);
+        healthBars.SetActive(true);
         rematchButton.onClick.AddListener(OnRematchClicked);
         changeButton.onClick.AddListener(OnChangeClicked);
         homeButton.onClick.AddListener(OnHomeClicked);
+
 
         // Get the TimerScript from the timer GameObject
         timerScript = timerGameObject.GetComponent<TimerScript>();
@@ -31,6 +33,20 @@ public class RematchScreen : MonoBehaviour
         {
             timerScript.onTimerComplete.AddListener(ShowRematchScreen);
             timerScript.ResetTimer();  // Start the timer
+        }
+    }
+
+    void Update()
+    {
+        if (player1.GetComponent<PlayerOneHealth>().health <= 0f)
+        {
+            UnityEngine.Debug.Log("Player 2 Wins");
+            ShowRematchScreen();
+        }
+        else if (player2.GetComponent<PlayerTwoHealth>().health <= 0)
+        {
+            UnityEngine.Debug.Log("Player 1 Wins");
+            ShowRematchScreen();
         }
     }
 
